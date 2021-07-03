@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Login</title>
+</head>
+<body>
+<!--Login-->
+<div class="container py-5">
+  <h1>Login</h1>
+    <table>
+        <form method="POST">
+            {% csrf_token %}
+            {{ login_form }}
+           <tr><td><input class="btn btn-primary" type="submit"></input></td></tr>
+        </form>
+    </table>
+
+    <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+    <a href="/password_reset">Forgot password?</a>
+</div>
+
+</body>
+</html>
